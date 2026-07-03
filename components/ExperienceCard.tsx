@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { MapPin } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 
 interface Role {
   title: string;
@@ -8,6 +8,7 @@ interface Role {
   description: string;
   highlights?: string[];
   technologies?: string[];
+  url?: string;
 }
 
 interface ExperienceCardProps {
@@ -130,6 +131,19 @@ export default function ExperienceCard({ experience, isFirst }: ExperienceCardPr
                   </span>
                 ))}
               </div>
+            )}
+
+            {/* link */}
+            {role.url && (
+              <a
+                href={role.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-mono text-xs text-muted-foreground mt-3 transition-colors hover:text-primary"
+              >
+                <ExternalLink className="h-3 w-3" />
+                Visit site
+              </a>
             )}
           </div>
         ))}

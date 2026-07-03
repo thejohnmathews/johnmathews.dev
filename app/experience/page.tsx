@@ -14,12 +14,29 @@ interface Experience {
     description: string;
     highlights?: string[];
     technologies?: string[];
+    url?: string;
   }[];
   industry: "tech" | "education" | "other";
-  type?: "web" | "embedded"; 
+  type?: "web" | "embedded";
 }
 
 const techExperiences: Experience[] = [
+  {
+    company: "MotoDB",
+    location: "Personal Project",
+    type: "web",
+    roles: [
+      {
+        title: "Creator & Developer",
+        startDate: "2026-06",
+        endDate: null,
+        description: "Building a lightning-fast, local-first motorcycle discovery and comparison website. Uses Astro for static, indexable pages and React islands for interactive catalog features, with motorcycle data validated at build time and published as content-hashed static datasets.",
+        technologies: ["Astro", "React", "TypeScript", "Cloudflare Workers", "SQLite"],
+        url: "https://motodb.thejohnmathews.workers.dev/",
+      }
+    ],
+    industry: "tech",
+  },
   {
     company: "Fastbreak AI",
     location: "Charlotte, NC",
