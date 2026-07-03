@@ -19,6 +19,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "MotoDB",
+    description:
+      "A lightning-fast, local-first motorcycle discovery and comparison website. Uses Astro for static, indexable pages and React islands for interactive catalog features, with motorcycle data validated at build time and published as content-hashed static datasets for instant browser-side discovery.",
+    category: "web",
+    tags: ["Astro", "React", "TypeScript", "Cloudflare Workers", "SQLite"],
+    status: "active",
+    links: [{ label: "Website", url: "https://motodb.thejohnmathews.workers.dev/", icon: "external" }],
+  },
+  {
     title: "Luis El Portero",
     description:
       "I made an access control system for my apartment door in Madrid after I got locked out once. It used an ESP8266 microcontroller continuously monitoring an endpoint on a server I set up. \
