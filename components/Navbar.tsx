@@ -11,10 +11,6 @@ const mainNavItems = [
   { label: "experience", path: "/experience" },
 ];
 
-const personalNavItems = [
-  { label: "personal", path: "/personal" },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,19 +32,7 @@ export default function Navbar() {
               className={`font-mono text-xs tracking-wide transition-colors hover:text-primary ${
                 pathname === item.path ? "text-primary" : "text-muted-foreground"
               }`}
-            >
-              {item.label}();
-            </Link>
-          ))}
-          <div className="h-4 w-px bg-border" />
-          {personalNavItems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`font-mono text-xs tracking-wide transition-colors hover:text-primary ${
-                pathname === item.path ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
+              >
               {item.label}();
             </Link>
           ))}
@@ -68,19 +52,6 @@ export default function Navbar() {
           <div className="container mx-auto px-6 py-4 flex flex-col gap-3">
             {/* Main navigation items */}
             {mainNavItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`font-mono text-xs tracking-wide transition-colors hover:text-primary ${
-                  pathname === item.path ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.label}();
-              </Link>
-            ))}
-            <div className="h-px w-full bg-border my-1" />
-            {personalNavItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
