@@ -25,7 +25,7 @@ const projects: Project[] = [
     category: "web",
     tags: ["Astro", "React", "TypeScript", "Cloudflare Workers", "SQLite"],
     status: "active",
-    links: [{ label: "Website", url: "https://motodb.thejohnmathews.workers.dev/", icon: "external" }],
+    links: [{ label: "Website", url: "https://motodb.app", icon: "external" }],
   },
   {
     title: "Luis El Portero",
